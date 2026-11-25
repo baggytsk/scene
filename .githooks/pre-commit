@@ -1,0 +1,8 @@
+#!/bin/sh
+# 커밋 전에 스테이징된 변경에서 비밀값을 찾는다.
+# 처음 한 번: git config core.hooksPath .githooks
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "gitleaks가 없습니다. brew install gitleaks 후 다시 커밋하세요." >&2
+  exit 1
+fi
+exec gitleaks git --pre-commit --staged --redact --verbose
