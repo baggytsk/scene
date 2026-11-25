@@ -5,13 +5,14 @@
 | 폴더 | 내용 |
 |---|---|
 | `backend/` | Java 25 · Spring Boot 4.1 · Gradle |
-| `app/` | Expo · TypeScript (웹 · iOS · Android) — 준비 중 |
+| `app/` | Expo SDK 58 · TypeScript (웹 · iOS · Android) |
 
 ## 시작하기
 
 ```bash
 git config core.hooksPath .githooks   # 커밋 전 gitleaks 검사 (brew install gitleaks)
 (cd backend && ./gradlew build)       # JDK 25 필요
+(cd app && npm ci && npm run web)     # Node 26 · 웹으로 열기
 ```
 
 헬스 확인: `./gradlew bootRun` 뒤 `GET /actuator/health`
