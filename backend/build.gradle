@@ -35,7 +35,7 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
-// 시각은 UTC로 다룬다 (docs/conventions.md 5). JDBC 드라이버가 JVM 시간대를 DB 세션 시간대로 보낸다
+// 시각은 UTC로 다룬다. JDBC 드라이버가 JVM 시간대를 DB 세션 시간대로 보낸다
 tasks.named('test') {
 	useJUnitPlatform()
 	systemProperty 'user.timezone', 'UTC'
