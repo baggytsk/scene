@@ -10,3 +10,6 @@
 .idea/
 .vscode/
 *.iml
+
+# 로컬 메모
+docs/local/
