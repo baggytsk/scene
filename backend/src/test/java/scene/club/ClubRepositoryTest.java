@@ -300,7 +300,7 @@ class ClubRepositoryTest {
         return createClub(ClubType.CREW, null, ownerNickname, name);
     }
 
-    /** docs/db.md "동아리 만들기는 한 트랜잭션" 1~5단계 (서비스가 생기면 그쪽으로 옮긴다) */
+    /** 동아리 만들기는 한 트랜잭션 1~5단계 (서비스가 생기면 그쪽으로 옮긴다) */
     private CreatedClub createClub(ClubType type, Long schoolId, String ownerNickname, String name) {
         User owner = users.save(User.signUp(ownerNickname));
         Club club = clubs.save(Club.create(type, name, schoolId, "서울", owner.getId()));

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-/** 동아리 안 표라서 조회는 항상 동아리를 함께 받는다 (docs/db.md "동아리 간 격리") */
+/** 동아리 안 표라서 조회는 항상 동아리를 함께 받는다 */
 public interface ClubMembershipRepository extends JpaRepository<ClubMembership, Long> {
 
     Optional<ClubMembership> findByClubIdAndUserId(Long clubId, Long userId);

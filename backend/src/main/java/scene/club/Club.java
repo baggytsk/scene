@@ -17,7 +17,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 /**
  * 동아리 · 크루 (ADR-002 · FN-2). 행은 지우지 않는다. 삭제하면 {@link #deletedAt}을 채우고 소유자를 비운다.
  *
- * <p>외래 키 열은 연관이 아니라 {@code Long}으로 둔다 (docs/db.md "JPA로 옮길 때").
+ * <p>외래 키 열은 연관이 아니라 {@code Long}으로 둔다.
  * 소유자 · 가입 기본 역할 외래 키는 지연(DEFERRABLE) 검사라, 이 값을 바꾸는 메서드는
  * flush 뒤 {@code SET CONSTRAINTS … IMMEDIATE}로 끝낸다.
  */
